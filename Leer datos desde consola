@@ -1,0 +1,16 @@
+// archivo: leerEntrada.js
+
+// Usamos el módulo 'readline' para leer entradas del usuario
+const readline = require('readline');
+
+// Creamos una interfaz para leer datos
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Preguntamos al usuario
+rl.question('¿Cómo te llamas? ', (nombre) => {
+  console.log(`¡Hola, ${nombre}! Encantado de conocerte.`);
+  rl.close(); // Cerramos la interfaz
+});
