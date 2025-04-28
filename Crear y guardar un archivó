@@ -1,0 +1,16 @@
+// archivo: crearArchivo.js
+
+// Importamos el módulo 'fs'
+const fs = require('fs');
+
+// Texto que queremos guardar
+const contenido = '¡Este es el primer archivo creado con Node.js!';
+
+// Usamos 'writeFile' para crear el archivo
+fs.writeFile('miArchivo.txt', contenido, (err) => {
+  if (err) {
+    console.error('Error al crear el archivo:', err);
+    return;
+  }
+  console.log('Archivo creado exitosamente como "miArchivo.txt"');
+});
